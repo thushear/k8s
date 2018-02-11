@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: javaweb
+spec:
+  replicas: 2
+  selector:
+    app: javaweb
+  template:
+    metadata:
+      labels:
+        app: javaweb
+    spec:
+      containers:
+      - name: javaweb
+        image: kubeguide/tomcat-app:v1
+        ports:
+        - containerPort: 8080
+        env:
+        - {name: MYSQL_SERVICE_HOST,value: 'mysql'}
+        - {name: MYSQL_SERVICE_PORT,value: '3306'}
+
+ 
