@@ -11,8 +11,12 @@ kubectl get svc
 
 
 ## Mysql 
-创建RC 
-kubectl create -f mysql-rc.yaml
+创建RC     
 
-创建service
-kubectl create -f mysql-svc.yaml
+kubectl create -f mysql-rc.yaml     
+
+
+创建service    
+
+kubectl create -f mysql-svc.yaml   
+
