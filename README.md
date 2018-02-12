@@ -15,7 +15,16 @@ kubectl get pods
 kubectl get svc    
 
 查看service 对外 url    
-minikube service javaweb --url    
+minikube service javaweb --url       
+
+查看deployment     
+kubectl  describe deployment nginx-deployment
+
+查看pod    
+kubectl get pods -l app=nginx     
+
+kubectl describe pod  nginx-deployment-6c54bd5869-9g72w   
+
 
 
 
@@ -38,3 +47,7 @@ kubectl create -f javaweb-rc.yaml
 kubectl create -f javaweb-svc.yaml
 
 
+## Nginx
+
+创建deployment    
+kubectl create -f nginx-deployment.yaml    
