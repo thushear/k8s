@@ -2,6 +2,16 @@
 kubernetes 
 
 ## 常用命令
+
+启动MiniKube    
+minikube start     
+
+启动DashBoard   
+ minikube dashboard   
+ 
+
+
+
 查看rc   
 
 kubectl get rc   
@@ -50,4 +60,23 @@ kubectl create -f javaweb-svc.yaml
 ## Nginx
 
 创建deployment    
-kubectl create -f nginx-deployment.yaml    
+kubectl create -f nginx-deployment.yaml       
+
+## Guestbook  Example
+rc    
+
+kubectl create -f redis-master-controller.yaml     
+kubectl get rc  
+
+kubectl get pods  
+
+service  
+
+kubectl create -f redis-master-service.yaml   
+kubectl get services   
+kubectl create -f redis-slave-controller.yaml     
+kubectl create -f redis-slave-service.yaml     
+kubectl create -f frontend-controller.yaml    
+kubectl create -f frontend-service.yaml  
+
+
